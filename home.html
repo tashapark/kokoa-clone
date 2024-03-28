@@ -11,39 +11,51 @@
     <meta name="description" content="This is my website." />
     <meta charset="UTF-8" />
   </head>
+
   <body>
+    <header>
+      <h1>Create An Account</h1>
+    </header>
     <form>
       <div>
-        <!-- label은 input이랑 같이 움직임. 폼에 질문 추가? for은 인풋에 id랑 같아야 적용됨-->
-        <label for="profile">Profile Photo</label>
-        <!-- 파일 업로드, 종류 제한: 여러개 가능, image는 다 되게  -->
-        <input id="profile" type="file" accept=".png, image/*" />
-      </div>
-      <div>
         <label for="first-name">First name</label>
-        <input id="first-name" required placeholder="Name" type="text" />
+        <input id="first-name" required placeholder="First name" type="text" />
       </div>
       <div>
-        <label for="website">Website</label>
-        <input id="website" required placeholder="Name" type="url" />
+        <label for="last-name">Last name</label>
+        <input id="last-name" required placeholder="Last name" type="text"" />
       </div>
       <div>
-        <input required placeholder="Password" minlength="10" type="password" />
-        <input type="submit" value="Create Account" />
+        <label for="email">Email</label>
+        <input id="email" required placeholder="Email" type="email" />
       </div>
+      <div>
+        <label for="user-name">Username</label>
+        <input id="user-name" required placeholder="Username" type="text"" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          id="password"
+          required
+          placeholder="Password"
+          minlength="10"
+          type="password"
+        />
+      </div>
+      <div>
+        <label for="birth-date">Birth date</label>
+        <input id="birth-date" required type="date" />
+      </div>
+      <div>
+        <label for="happiness">How happy are you?</label>
+        <input id="happiness" required type="range" />
+      </div>
+      <div>
+        <label for="color">What is your fav.color?</label>
+        <input id="color" required type="color" />
+      </div>
+      <input type="submit" value="Create Account" />
     </form>
-    <!-- div를 대체 가능한 semantic tag들 div로 해도 되지만, 
-      코드만 봐도 무슨 의민지 알 수 있음. 이게 수많은 div보다 나음. 
-    semantic을 쓰려고 노력하자. -->
-    <header>
-      <h1>nico times</h1>
-    </header>
-    <!-- div id="main"이라고 해도 되지만, 글의 메인임을 보여줌  -->
-    <main>
-      <!-- span 은 짧은 것, p는 문단을 할 때 쓸 것  -->
-      <span>hello!</span>
-    </main>
-    <!-- 꼬릿말 태그도 마찬가지  -->
-    <footer>&copy; 2020 N.C</footer>
   </body>
 </html>
