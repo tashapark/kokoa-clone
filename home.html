@@ -1,61 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- 창 옆에 띄우는 작은 아이콘  -->
-    <link
-      rel="shortcut icon"
-      sizes="16x16 32x32 64x64"
-      href="https://nomadcoders.co/m.png"
-    />
     <title>Home</title>
+    <link href="style.css" rel="stylesheet" />
     <meta name="description" content="This is my website." />
     <meta charset="UTF-8" />
+    <style>
+      html {
+        background-color: tomato;
+      }
+      body {
+        background-color: antiquewhite;
+        /* 시계방향으로 4개 위 오 아래 왼 */
+      }
+      /* body의 마진은 8px이 디폴트값임 */
+      div {
+        /* inline은 높이나 넓이가 없음. content의 값이 됨. so, inline은 박스가 아님. */
+        margin: 20px 15px;
+        height: 150px;
+        width: 150px;
+        background-color: whitesmoke;
+      }
+    </style>
   </head>
 
   <body>
-    <header>
-      <h1>Create An Account</h1>
-    </header>
-    <form>
-      <div>
-        <label for="first-name">First name</label>
-        <input id="first-name" required placeholder="First name" type="text" />
-      </div>
-      <div>
-        <label for="last-name">Last name</label>
-        <input id="last-name" required placeholder="Last name" type="text"" />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" required placeholder="Email" type="email" />
-      </div>
-      <div>
-        <label for="user-name">Username</label>
-        <input id="user-name" required placeholder="Username" type="text"" />
-      </div>
-      <div>
-        <label for="password">Password</label>
-        <input
-          id="password"
-          required
-          placeholder="Password"
-          minlength="10"
-          type="password"
-        />
-      </div>
-      <div>
-        <label for="birth-date">Birth date</label>
-        <input id="birth-date" required type="date" />
-      </div>
-      <div>
-        <label for="happiness">How happy are you?</label>
-        <input id="happiness" required type="range" />
-      </div>
-      <div>
-        <label for="color">What is your fav.color?</label>
-        <input id="color" required type="color" />
-      </div>
-      <input type="submit" value="Create Account" />
-    </form>
+    <div></div>
   </body>
 </html>
