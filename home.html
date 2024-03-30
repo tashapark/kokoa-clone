@@ -7,26 +7,50 @@
     <meta charset="UTF-8" />
     <style>
       body {
+        height: 100vh;
+        /* vh --> viewport height 화면 높이. 100vh 화면 놓이의 100%
+        컴퓨터에 따라 다르게 나타남 vh!!! 쓰자 */
+        /* 세로가 그대로인 이유는 body값이 div 수준이기 때문임. 그래서 body에 높이를 줘야 함 */
         margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        /*  계산을 알아서 해줌. main axis에 영향 가로  */
+        flex-direction: column;
+        /* 원래 가로가 디폴트 주축인데 --> 디폴트는 row인 것. 
+        바꾸고 싶으면 column으로 바꾸면, main axis가 세로가 됨. 크로스는 가로가 됨. 
+        그래서 main or cross axis라고 하지 수평 수직이라고 안 함. 바뀔 수 있으니깐 
+        column-reverse는 아래서부터 123임 row는 반대*/
+        align-items: center;
+        /* cross axis 세로축에 영향. body에 무조건 height가 있어야함.  */
+        /* flex-wrap: wrap; */
+        /* wrap은 같은 줄에 넣을 만큼 넣고 안되면 쌓음 */
       }
-
+      /* flex box를 쓰면 해결. 
+        but, 1) 자식이 아닌 부모 엘리먼트에게 적용. 부모를 flex container로 만들어야 함 
+        2) */
       div {
-        display: inline-block;
-        /* inline-block은 위딧 헤잇에 옆으로 올수도 있음  */
-        /* but, 문제가 너무 많음.일단 요소 사이에 빈공간이 있는데, 정해진 형식도 없음.
-        반응형이 아님.. 잘 안씀. 
-        inlined은 옆에 아무것도 안 와 */
-        width: 50px;
-        height: 50px;
+        /* div에 숫자를 부여했기 때문에 
+        div도 부모 엘리먼트가 되어서 flex container로 만들 수 있음
+        직접적인 부모만 가능함 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        color: aliceblue;
+        width: 300px;
+        height: 300px;
         background-color: teal;
       }
       /* div는 block임 */
+      #second {
+        background-color: wheat;
+      }
     </style>
   </head>
 
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>1</div>
+    <div id="second">2</div>
+    <div>3</div>
   </body>
 </html>
