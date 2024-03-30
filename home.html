@@ -10,35 +10,23 @@
         margin: 20px;
       }
 
-      .btn {
-        padding: 5px 10px;
-        border-radius: 5px;
-
-        /* class는 여러개 겹쳐도 됨.
-       한개의 요소가 여러 개 클래스를  가질 수도 있음 */
-      }
-      .tomato {
-        background-color: tomato;
-        color: aliceblue;
-        /* class는 여러개 겹쳐도 됨.
-       한개의 요소가 여러 개 클래스를  가질 수도 있음 */
-      }
-
-      .teal {
+      div {
+        display: inline-block;
+        /* inline-block은 위딧 헤잇에 옆으로 올수도 있음  */
+        /* but, 문제가 너무 많음.일단 요소 사이에 빈공간이 있는데, 정해진 형식도 없음.
+        반응형이 아님.. 잘 안씀. 
+        inlined은 옆에 아무것도 안 와 */
+        width: 50px;
+        height: 50px;
         background-color: teal;
-
-        /* class는 여러개 겹쳐도 됨.
-       한개의 요소가 여러 개 클래스를  가질 수도 있음 */
       }
+      /* div는 block임 */
     </style>
   </head>
 
   <body>
-    <span class="btn tomato">hello</span>
-    <span class="btn teal">hello</span>
-    <span class="btn tomato">hello</span>
-    <span class="btn teal">hello</span>
-    <span class="btn tomato">hello</span>
-    <span class="btn teal">hello</span>
+    <div></div>
+    <div></div>
+    <div></div>
   </body>
 </html>
