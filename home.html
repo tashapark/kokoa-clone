@@ -6,59 +6,39 @@
     <meta name="description" content="This is my website." />
     <meta charset="UTF-8" />
     <style>
-      * {
-        border: 1px dashed black;
-        /* border는 inline이랑 block 다 됨 */
-        /* inline은 높이와 넓이가 없어서, 위아래 마진 줄 수 없음. 좌우만 줄 수 있음. 만약에 주고 싶으면 block으로 바꿔야 함.  */
-      }
-      /* 모든 것을 의미함 */
-      html {
-        background-color: tomato;
-      }
       body {
-        margin: 0;
-        padding: 20px;
-        background-color: cadetblue;
-        /* 시계방향으로 4개 위 오 아래 왼 */
-      }
-      /* body의 마진은 8px이 디폴트값임 */
-      div {
-        /* inline은 높이나 넓이가 없음. content의 값이 됨. so, inline은 박스가 아님. */
-        padding: 20px;
-
-        /* padding은 경계로부터 안쪽까지 의미 */
-        /* 보더 안 이쁘데 ㅋㅋ 하나만 쓴데  */
-      }
-      #first {
-        background-color: whitesmoke;
-        width: 150px;
-        height: 150px;
+        margin: 20px;
       }
 
-      #second {
-        background-color: cornflowerblue;
-        width: 100px;
-        height: 100px;
+      .btn {
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        /* class는 여러개 겹쳐도 됨.
+       한개의 요소가 여러 개 클래스를  가질 수도 있음 */
+      }
+      .tomato {
+        background-color: tomato;
+        color: aliceblue;
+        /* class는 여러개 겹쳐도 됨.
+       한개의 요소가 여러 개 클래스를  가질 수도 있음 */
       }
 
-      #third {
-        background-color: rgb(209, 170, 123);
-        width: 50px;
-        height: 50px;
-      }
-      span {
-        border-style: dotted;
+      .teal {
+        background-color: teal;
+
+        /* class는 여러개 겹쳐도 됨.
+       한개의 요소가 여러 개 클래스를  가질 수도 있음 */
       }
     </style>
   </head>
 
   <body>
-    <div id="first">
-      <div id="second">
-        <div id="third">
-          <span>Hello</span>
-        </div>
-      </div>
-    </div>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
   </body>
 </html>
