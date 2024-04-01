@@ -1,36 +1,77 @@
 body {
   height: 100vh;
-  background-color: tomato;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+header {
+  text-align: center;
+  font-family: -apple-system, "system-ui", "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px;
+}
+.wrapper {
   display: flex;
   justify-content: center;
-
   align-items: center;
+  padding: 10px 10px;
 }
-
-#first {
-  background-color: wheat;
-  width: 300px;
+.white {
+  width: 150px;
   height: 300px;
-  border: 3px solid black;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
 }
 
-.teal {
+h3,
+span {
+  position: absolute;
+  left: 5px;
+}
+
+h3 {
+  top: 20px;
+}
+span {
+  top: 80px;
+}
+
+#tomato div {
+  width: 140px;
+  background-color: tomato;
+  position: absolute;
+  left: 5px;
+}
+#teal div {
+  width: 140px;
   background-color: teal;
+  position: absolute;
+  left: 5px;
+}
+#burlywood div {
+  width: 140px;
+  background-color: burlywood;
+  position: absolute;
+  left: 5px;
+}
+#thistle div {
+  width: 140px;
+  background-color: thistle;
+  position: absolute;
+  left: 5px;
 }
 
-#second,
-#fourth {
-  border: 3px solid whitesmoke;
-  width: 60px;
-  height: 60px;
+#tomato div:first-child,
+#teal div:first-child,
+#burlywood div:first-child,
+#thistle div:first-child {
+  height: 16px;
+  top: 5px;
 }
 
-#third {
-  border: 3px dashed whitesmoke;
-  width: 260px;
-  height: 60px;
+#tomato :last-child,
+#teal :last-child,
+#burlywood :last-child,
+#thistle :last-child {
+  height: 160px;
+  bottom: 5px;
 }

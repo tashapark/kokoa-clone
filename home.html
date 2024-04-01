@@ -5,55 +5,37 @@
     <link href="style.css" rel="stylesheet" />
     <meta name="description" content="This is my website." />
     <meta charset="UTF-8" />
-    <style>
-      body {
-        height: 1000vh;
-        margin: 50px;
-      }
-      /* div {
-        width: 150px;
-        height: 150px;
-        background-color: wheat;
-        position: relative;
-      } */
-      /* psuedo selector; class나 id를 만드는 것보다 훨씬 좋은 방법
-      html 건들일 필요가 없음 */
-      span {
-        background-color: yellowgreen;
-        padding: 5px;
-        border-radius: 10px;
-      }
-      /* input:optional {
-        border: 1px solid wheat;
-      }
-      input:required {
-        border: 1px solid tomato;
-      } 너무 반복됨 */
-
-      input {
-        border: 1px solid wheat;
-      }
-      input:required {
-        border-color: tomato;
-      }
-      /* 어떤 속성이든 []안에 넣고 특정 가능
-      ~="" 뒤에가 들어간 것 전부다 가능 exactly 예, lastname, firstname
-      앞뒤 공백이 있는 상태에서 name만 선택 
-      $="" 이거로 끝나는 경우 전부 선택
-       *= is 'contains'; *="name" -> ex) rename, ringname, asdfajsnameadsfasdf 다 잡아줌*/
-      input[placeholder~="name"] {
-        background-color: pink;
-      }
-    </style>
   </head>
 
   <body>
-    <div>
-      <form>
-        <input type="text" placeholder="First name" />
-        <input type="text" placeholder="Last name" />
-        <input type="password" required placeholder="password" />
-      </form>
+    <header><h1>The Best Colors</h1></header>
+    <div class="wrapper">
+      <div id="tomato" class="white">
+        <div></div>
+        <h3>Tomato</h3>
+        <span>#FF6347</span>
+        <div></div>
+      </div>
+      <div id="teal" class="white">
+        <div></div>
+        <h3>Teal</h3>
+        <span>#008080</span>
+        <div></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div id="burlywood" class="white">
+        <div></div>
+        <h3>Burylwood</h3>
+        <span>#DEB887</span>
+        <div></div>
+      </div>
+      <div id="thistle" class="white">
+        <div></div>
+        <h3>Thistle</h3>
+        <span>#D7BFD7</span>
+        <div></div>
+      </div>
     </div>
   </body>
 </html>
