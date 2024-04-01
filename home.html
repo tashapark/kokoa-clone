@@ -5,13 +5,36 @@
     <link href="style.css" rel="stylesheet" />
     <meta name="description" content="This is my website." />
     <meta charset="UTF-8" />
+    <style>
+      body {
+        height: 1000vh;
+        margin: 20px;
+      }
+      div {
+        /* position: fixed; */
+        /* 화면 그 위치에 계쏙 있음 */
+        width: 300px;
+        height: 300px;
+        color: white;
+      }
+
+      #green {
+        background-color: teal;
+        /* top: 5px;
+        left: 200px; */
+        opacity: 0.2;
+        position: fixed;
+        /* top left right bottom 중 하나만 수정해도 div위치, margin, block의 영향을 받지 않음. */
+      }
+      #different {
+        background-color: wheat;
+        width: 350px;
+      }
+    </style>
   </head>
 
   <body>
-    <div id="first">
-      <div id="second" class="teal"></div>
-      <div id="third" class="teal"></div>
-      <div id="fourth" class="teal"></div>
-    </div>
+    <div id="green"></div>
+    <div id="different"></div>
   </body>
 </html>
