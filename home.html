@@ -10,35 +10,45 @@
         height: 1000vh;
         margin: 50px;
       }
-      div {
+      /* div {
         width: 150px;
         height: 150px;
         background-color: wheat;
         position: relative;
-      }
+      } */
       /* psuedo selector; class나 id를 만드는 것보다 훨씬 좋은 방법
       html 건들일 필요가 없음 */
       span {
-        background-color: tomato;
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
       }
-      /* nth-child()숫자 하나씩 안 넣고 걍 짝수는 even(2n) 떄림 
-      odd(2n+1)도 가능 
-      3개당 하나씩 바뀌려면 3n+1하면 됨
-      n+1을 생각할 것. n을 잘 활용하자 */
-      span:nth-child(even) {
-        background-color: teal;
+      /* parent all children 부모는 원하는 만큼 써도 상관이 없음. 부모안의 것을 가리킴 */
+      p span {
+        color: white;
+      }
+      /* parent > direct children 비로 다이렉트 아래있는 자식한테 적용가능 오호 */
+      div > span {
+        text-decoration: underline;
+      }
+      /* sibling; next to the sibling만 적용; p 바로 옆에 있는(뒤에 오는) span에게 css걸기 */
+      p + span {
+        text-decoration: underline;
+      }
+      /* 바로 뒤에 오는 sibling은 아닌데 sibling인 경우에 사용 */
+      p ~ span {
+        text-decoration: underline;
       }
     </style>
   </head>
 
   <body>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
+    <div>
+      <span>hello</span>
+      <p>
+        dkkafflahlae alglahglw algaler9phg alfndl prjlsjglajg lkdjglakjg.
+        alghlahfka sahglaglka <span>inside</span>
+      </p>
+    </div>
   </body>
 </html>
