@@ -23,32 +23,37 @@
         padding: 5px;
         border-radius: 10px;
       }
-      /* parent all children 부모는 원하는 만큼 써도 상관이 없음. 부모안의 것을 가리킴 */
-      p span {
-        color: white;
+      /* input:optional {
+        border: 1px solid wheat;
       }
-      /* parent > direct children 비로 다이렉트 아래있는 자식한테 적용가능 오호 */
-      div > span {
-        text-decoration: underline;
+      input:required {
+        border: 1px solid tomato;
+      } 너무 반복됨 */
+
+      input {
+        border: 1px solid wheat;
       }
-      /* sibling; next to the sibling만 적용; p 바로 옆에 있는(뒤에 오는) span에게 css걸기 */
-      p + span {
-        text-decoration: underline;
+      input:required {
+        border-color: tomato;
       }
-      /* 바로 뒤에 오는 sibling은 아닌데 sibling인 경우에 사용 */
-      p ~ span {
-        text-decoration: underline;
+      /* 어떤 속성이든 []안에 넣고 특정 가능
+      ~="" 뒤에가 들어간 것 전부다 가능 exactly 예, lastname, firstname
+      앞뒤 공백이 있는 상태에서 name만 선택 
+      $="" 이거로 끝나는 경우 전부 선택
+       *= is 'contains'; *="name" -> ex) rename, ringname, asdfajsnameadsfasdf 다 잡아줌*/
+      input[placeholder~="name"] {
+        background-color: pink;
       }
     </style>
   </head>
 
   <body>
     <div>
-      <span>hello</span>
-      <p>
-        dkkafflahlae alglahglw algaler9phg alfndl prjlsjglajg lkdjglakjg.
-        alghlahfka sahglaglka <span>inside</span>
-      </p>
+      <form>
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+        <input type="password" required placeholder="password" />
+      </form>
     </div>
   </body>
 </html>
