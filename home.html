@@ -16,21 +16,29 @@
         background-color: wheat;
         position: relative;
       }
-      /* psuedo selector */
-      div:first-child {
+      /* psuedo selector; class나 id를 만드는 것보다 훨씬 좋은 방법
+      html 건들일 필요가 없음 */
+      span {
         background-color: tomato;
       }
-      div:last-child {
+      /* nth-child()숫자 하나씩 안 넣고 걍 짝수는 even(2n) 떄림 
+      odd(2n+1)도 가능 
+      3개당 하나씩 바뀌려면 3n+1하면 됨
+      n+1을 생각할 것. n을 잘 활용하자 */
+      span:nth-child(even) {
         background-color: teal;
       }
     </style>
   </head>
 
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
   </body>
 </html>
