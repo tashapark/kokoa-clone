@@ -11,29 +11,26 @@
         margin: 50px;
       }
       div {
-        width: 300px;
-        height: 300px;
+        width: 150px;
+        height: 150px;
         background-color: wheat;
         position: relative;
-        /* position: relative; 부모가 랠러티브면 앱솔루트가 이 기준에 맞춤 아니면, 바디에 맞춤. */
       }
-      .green {
+      /* psuedo selector */
+      div:first-child {
+        background-color: tomato;
+      }
+      div:last-child {
         background-color: teal;
-        height: 100px;
-        width: 100px;
-        position: absolute;
-        /* 가장 가까운 relative 부모를 기준으로 이동. position:relative; 를 해주면 부모가 된다.
-        없으면 body기준으로 이동*/
-        /* relative랑 absolute가 중요.. 나 거의 fixed 썼는데.. 많이 수정해야 할 듯.. */
-        right: 0;
-        bottom: 0;
       }
     </style>
   </head>
 
   <body>
-    <div>
-      <div class="green"></div>
-    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </body>
 </html>
