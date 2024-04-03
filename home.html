@@ -5,23 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <style>
+      /* 마우스 없이도 돌아가고 멈춤 
+      @keyframes 애니메이션 이름 쓰고 어떻게 할 지 적어주면 됨*/
+      @keyframes superSexyCoinFlip {
+        from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateY(180deg) translateX(100px);
+        }
+      }
       img {
         border: 6px solid black;
-        /*원이 됨  */
         border-radius: 50%;
-        /* transform; 3d가능  
-        다른 요소 box를 변경하지 않고 이동하기 위해서 사용함.
-        margin, padding 다 안 됨
-        여러 개 적용 가능 */
-        /* 트랜지션은 무조건 루트 엘리먼트에 있어야 함
-        없으면,, 쓰레기래 안예쁘대 ㅋㅋㅋㅋㅋ */
-        transition: transform 2s ease-in-out;
-      }
-      img:hover {
-        /* 한바퀴 돌리고, 작아졌다가 돌아옴
-        X,Y,Z 축에 따라 달라짐..
-        재밌는 게 왤케 많아,. */
-        transform: rotateY(360deg) scale(0.5);
+        /* infinite 계속 되게 만들 수 있음 */
+        animation: superSexyCoinFlip 5s ease-in-out infinite;
       }
     </style>
   </head>
