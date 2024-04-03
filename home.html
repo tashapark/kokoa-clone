@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Home</title>
-    <link href="style.css" rel="stylesheet" />
-    <meta name="description" content="This is my website." />
     <meta charset="UTF-8" />
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      button {
+        padding: 5px;
+        border-radius: 10px;
+      }
 
+      /* state
+      - active는 눌렀을 때
+      - hover는 올렸을 때 
+      - focus는 키보드로 선택되었을 때 - input 이랑 잘 맞음
+      - visited 클릭해서 방문했을 때 기억 - a랑  
+      - 섞어도 해당될 때 다 적용됨*/
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      /* focus-within; focus된 자식이 있는 부모에게 적용함 
+      선택이 되면 색이 변하게 */
+      form:focus-within {
+        border-color: seagreen;
+      }
+      /* 부모가 선택될 때 자녀가 바뀌도록 할 수도 있는 것 */
+      form:hover input:focused {
+        background-color: sienna;
+      }
+    </style>
+  </head>
   <body>
-    <header><h1>The Best Colors</h1></header>
-    <div class="wrapper">
-      <div id="tomato" class="white">
-        <div></div>
-        <h3>Tomato</h3>
-        <span>#FF6347</span>
-        <div></div>
-      </div>
-      <div id="teal" class="white">
-        <div></div>
-        <h3>Teal</h3>
-        <span>#008080</span>
-        <div></div>
-      </div>
-    </div>
-    <div class="wrapper">
-      <div id="burlywood" class="white">
-        <div></div>
-        <h3>Burylwood</h3>
-        <span>#DEB887</span>
-        <div></div>
-      </div>
-      <div id="thistle" class="white">
-        <div></div>
-        <h3>Thistle</h3>
-        <span>#D7BFD7</span>
-        <div></div>
-      </div>
-    </div>
+    <form>
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+    </form>
+    <a href="https://apple.com">apple</a>
   </body>
 </html>
