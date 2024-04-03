@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <style>
-      /* root는 기본적으로 모든 다큐멘트의 뿌리가 됨 
-            변수를 넣어주면 색을 일일히 바꾸지 않아도 됨
-            한 번에 변경가능. 
-            custom property라고 하지만 니코는 변수라고 부르는 것을 선호
-            --하고 변수명 만약에 띄어쓰기 있으면-쓰고*/
-
-      :root {
-        --main-color: #489ee3;
-        --default-border: 1px solid var(var(--main-color));
-      }
-      body {
-        height: 1000vh;
-        margin: 50px;
-      }
-      p {
-        background-color: var(--main-color);
-      }
+      /* transition: 어떤 상태에서 다른 상태로의 "변화"를 애니메이션으로 만드는 방법
+      바꿀 거는 무조건 state에 명시가 되어 있어야 함
+      트랜지션은 무조건 상태가 없는 곳에 써야 함
+       */
       a {
-        color: var(--main-color);
+        color: white;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 20px;
+        transition: all 1s ease-in-out;
+        /* transition: background-color 10s ease-in-out, color 5s ease-in-out;
+        걍 변하는 모든 것들을 한번에 all이라고 쓸 수 있음 
+       - ease-in; 시작과 끝이 빠름
+       - ease-out; 시작과 끝이 느림
+       - ease-in-out; 시작이 빠르고 끝이 느림
+        - cubic-bezier; 커스텀 하는 듯*/
+      }
+      a:hover {
+        border-radius: 20px;
+        color: tomato;
+        background-color: wheat;
       }
     </style>
   </head>
   <body>
-    <p>ahfkahgkaehkjhakwjghfkjawhkja akjghkjahgk ak.aghahahj</p>
-    <a href="https://apple.com">apple</a>
+    <a href="#">go home</a>
   </body>
 </html>
