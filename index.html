@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Kokoa Clone</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <!-- class 이름은 길게 FATHER__자식 이름을 알 수 있도록 
+    BEM -> 클래스 이름을 쓰는 법; 같은데 특징을 적을 때는 ex)btn btn--big -->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welconme-header">
+      <h1 class="welconme-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welconme-header__text">
+        If you have a Kokoa Acount, log in with your email or phone number.
+      </p>
+    </header>
+
+    <form id="login-form">
+      <input type="text" placeholder="Email or phone number" />
+      <input type="password" placeholder="Password"/ >
+      <input type="submit" value="Log In" />
+      <a href="#">Find Kokoa Acount or Password</a>
+    </form>
+
+    <script
+      src="https://kit.fontawesome.com/edabccc9aa.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
