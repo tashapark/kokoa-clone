@@ -17,7 +17,9 @@
         width: 200px;
         height: 200px;
       }
-      /* orientation으로 폰 방향 조절 시 조건 부여 */
+      /* orientation으로 폰 방향 조절 시 조건 부여 
+     
+      min-device-width 폰에만 적용됨*/
       @media screen and (min-width: 601px) and (max-width: 1200px) and (orientation: portrait) {
         div {
           background-color: wheat;
@@ -29,6 +31,12 @@
       @media screen and (orientation: landscape) {
         span {
           display: none;
+        }
+      }
+      /*  @media print는 진짜 프린트할 때 적용함 */
+      @media print {
+        body {
+          background-color: tomato;
         }
       }
     </style>
