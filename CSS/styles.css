@@ -1,30 +1,17 @@
+/* 순서가 중요함!! */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap");
+/* 기존 셋팅 값 전부 없애는 법 */
+@import "reset.css";
+@import "variables.css";
+
+/* components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+
+/* screens */
+@import "screens/login.css";
+
+/* style에는 전체 화면에 적용되는 것을 넣기 */
 body {
   font-family: "Open Sans", sans-serif;
-}
-.status-bar {
-  display: flex;
-  justify-content: center;
-}
-
-.status-bar__column {
-  width: 33%;
-}
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.status-bar__column .fa-battery-full {
-  margin: 0px 5px;
 }

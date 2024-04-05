@@ -24,16 +24,20 @@
       </div>
     </div>
 
-    <header class="welconme-header">
-      <h1 class="welconme-header__title">Welcome to Kokoa Clone</h1>
-      <p class="welconme-header__text">
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kokoa Clone</h1>
+      <p class="welcome-header__text">
         If you have a Kokoa Acount, log in with your email or phone number.
       </p>
     </header>
 
-    <form id="login-form">
-      <input type="text" placeholder="Email or phone number" />
-      <input type="password" placeholder="Password"/ >
+    <!-- action은 data를 어디로 보낼지 -->
+    <!-- methods 두 방법 1) post; 백엔드에 정보 보냄. 서버
+    2) get url에 포함되어도 상관없는 정보들을 get으로 보냄 서버 없을 때. 아이디/비번 ㄴㄴ
+  get무조건 써놓을 것. 프로젝트 업로드 한 곳에서는 post 안됨-->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input name="password" type="password" placeholder="Password"/ >
       <input type="submit" value="Log In" />
       <a href="#">Find Kokoa Acount or Password</a>
     </form>
