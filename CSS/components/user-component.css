@@ -1,0 +1,39 @@
+.user-component {
+  display: flex;
+  position: fixed;
+  top: 160px;
+}
+
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+/* 다른 데 응용하려고 중간 사이즈 버전을 만든 것 */
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+  /* 사진 사이즈 변경 시 가로 세율 비율 그대로 */
+  /* object-fit: cover; */
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* friends에는 안 들어가는 데 다른 데도 쓸 거니깐 디폴트 값으로 만든 것 */
+.user-component__subtitle {
+  margin-top: 8px;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+  border-radius: 30px;
+}

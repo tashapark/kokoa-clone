@@ -15,5 +15,32 @@
 }
 
 .nav__link {
+  /* absolute는 부모 기준으로 움직임 */
+  position: relative;
   color: #2e363e;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  /* 원을 만들려면 크기의 반절을 주면 됨 */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  /* 겹칠 때.. 포지션도 정리하자 */
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__dot {
+  color: tomato;
+  font-size: 30px;
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
 }
