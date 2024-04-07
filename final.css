@@ -20,8 +20,8 @@ body {
 
 .screens__main {
   position: relative;
-  width: 450px;
-  height: 750px;
+  width: 400px;
+  height: 710px;
   background-color: white;
   border-radius: 25px;
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
@@ -73,7 +73,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
+  margin: 15px 20px;
 }
 
 .singer {
@@ -87,8 +87,11 @@ body {
   height: 180px;
   border-radius: 20px;
   box-shadow: 0px 15px 15px rgba(15, 51, 141, 0.2);
+  transition: transform 1s ease-in-out;
 }
-
+.singer__avatar:hover {
+  transform: scale(1.5);
+}
 .singer__name {
   margin-top: 20px;
   font-weight: 750;
@@ -102,7 +105,7 @@ body {
 }
 
 .btn {
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -121,6 +124,7 @@ body {
 .btn__middle:last-child {
   background-color: #ffffff;
   color: #a3a4a3;
+  margin-left: 10px;
 }
 
 .btn__middle:last-child i {
@@ -132,8 +136,9 @@ li {
 }
 
 .chatlist {
-  height: 270px;
+  height: 250px;
   overflow-y: auto;
+  z-index: 1;
 }
 .chatlist__list {
   height: 60px;
@@ -144,9 +149,10 @@ li {
   align-items: center;
   justify-content: space-between;
   margin: 4px 5px;
+  transition: transform 2s ease-in-out;
 }
 
-.chatlist__list:nth-child(2) {
+.chatlist__list:hover {
   box-shadow: 5px 5px 5px rgba(15, 51, 141, 0.2);
 }
 
@@ -155,8 +161,12 @@ li {
   height: 45px;
   border-radius: 22.5px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease-in-out;
 }
 
+.chatlist__cover:hover {
+  transform: translateX(60px) scale(2.5);
+}
 .chatlist__data {
   display: flex;
   align-items: center;
@@ -203,15 +213,13 @@ li {
 
 .nav {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   width: 100%;
+  margin: 10px 0px;
   background-color: #f9f9fa;
   border-radius: 25px;
-
-  /* 화면 길이에 맞게  */
   box-sizing: border-box;
   border-top: 1px solid rgba(121, 121, 121, 0.3);
-  z-index: 1;
 }
 
 .nav__list {
@@ -251,4 +259,77 @@ li {
   position: absolute;
   left: 20px;
   bottom: 8px;
+}
+
+@media (max-width: 750px) {
+  .screens__main {
+    position: relative;
+    width: 350px;
+    height: 640px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+  }
+
+  .singer__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 15px rgba(15, 51, 141, 0.2);
+  }
+
+  .btn__middle {
+    border: none;
+    border-radius: 50px;
+    padding: 5px 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+  }
+
+  .chatlist {
+    height: 230px;
+    overflow-y: auto;
+    z-index: 1;
+  }
+  .chatlist__cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .chatlist__nickname {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .chatlist__chat {
+    font-size: 10px;
+    font-weight: 500;
+    color: #a3a4a3;
+  }
+
+  .chatlist__nav {
+    font-size: 9px;
+    font-weight: 500;
+    color: #a3a4a3;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+  }
+
+  .chatlist__notification {
+    background-color: rgb(60, 201, 187);
+    width: 15px;
+    height: 15px;
+    border-color: 2px solid #ffffff;
+    border-radius: 7.5px;
+    color: white;
+    font-weight: 600;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    padding-top: 1px;
+    margin-top: 5px;
+  }
 }
