@@ -28,6 +28,18 @@ body {
   margin: 30px;
 }
 
+@keyframes blinkIcon {
+  from {
+    color: white;
+  }
+  to {
+    color: pink;
+  }
+}
+.status-bar__column .fa-battery-full {
+  -webkit-animation: blinkIcon 4s ease-in-out infinite;
+}
+
 .status-bar {
   justify-content: center;
   display: flex;
